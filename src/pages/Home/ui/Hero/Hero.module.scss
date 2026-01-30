@@ -1,0 +1,42 @@
+.hero {
+    background-color: var(--color-yellow);
+    padding: 24px 0 fluid(63, 30);
+}
+
+.inner {
+    @include flex(center, center) {
+        column-gap: fluid(21, 10);
+    }
+
+    @include screen-sm {
+        flex-direction: column;
+    }
+}
+
+.image {
+    width: fluid(326, 227);
+
+    @include screen-sm {
+        order: 2;
+    }
+}
+
+.description {
+    @include flex {
+        flex-direction: column;
+        row-gap: fluid(52, 16);
+    }
+
+    color: var(--color-light);
+    max-width: 437px;
+
+    @include screen-sm {
+        text-align: center;
+    }
+}
+
+.title {
+    & span {
+        color: var(--color-accent);
+    }
+}
