@@ -1,0 +1,30 @@
+:root {
+    --color-yellow: #FFAB08;
+    --color-light: #FFFFFF;
+    --color-accent: #FF5C00;
+    --color-dark: #000000;
+    --color-grey: #F2F2F3;
+    --color-light-dark: #F9F9F9;
+    --color-grey-dark: #B1B1B1;
+    --color-accent-light: #FF7020;
+
+
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-extrabold: 700;
+
+    --font-family-primary: 'Nunito', sans-serif;
+    
+    --line-height-normal: 1.5;
+
+    --border-radius-50: 50px;
+    --border-radius-18: 18px;
+    --border-radius-6: 6px;
+    --border-radius-12: 12px;
+    --border-radius-8: 8px;
+
+    --transition-duration: .2;
+
+    --container-width: #{$container-desktop-width}px;
+    --container-padding-x: #{fluid(32, 10)};
+}
