@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={clsx(styles.inner, "container")}>
-                <Logo className={styles.logo} pathImg={logo} width={150} height={29} />
+                <Logo pathImg={logo} width={150} height={29} />
             </div>
         </header>
     )

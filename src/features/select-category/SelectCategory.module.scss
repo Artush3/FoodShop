@@ -1,0 +1,15 @@
+.list {
+    @include flex(center, space-between) {
+        column-gap: var(--default-gap)
+    };
+
+    @include screen-xxl {
+        overflow-x: scroll;
+    }
+}
+
+.item {
+    @include screen-xxl {
+        min-width: fit-content;
+    }
+}

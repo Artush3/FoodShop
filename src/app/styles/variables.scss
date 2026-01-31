@@ -8,6 +8,7 @@
     --color-grey-dark: #B1B1B1;
     --color-accent-light: #FF7020;
 
+    --default-gap: 15px;
 
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
@@ -23,7 +24,7 @@
     --border-radius-12: 12px;
     --border-radius-8: 8px;
 
-    --transition-duration: .2;
+    --transition-duration: .2s;
 
     --container-width: #{$container-desktop-width}px;
     --container-padding-x: #{fluid(32, 10)};

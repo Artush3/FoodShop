@@ -1,17 +1,15 @@
 import { Link } from "react-router"
 import styles from "./Logo.module.scss"
-import clsx from "clsx"
 
 const Logo = (props) => {
     const {
         pathImg,
         width,
-        height,
-        className
+        height
     } = props
 
     return (
-        <Link to="/" className={clsx(styles.logo, className)}>
+        <Link to="/" className={styles.logo}>
             <img 
                 src={pathImg} 
                 alt="" 

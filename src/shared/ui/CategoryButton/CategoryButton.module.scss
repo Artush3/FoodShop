@@ -1,0 +1,18 @@
+.button {
+    @include flex(center, center) {
+        column-gap: 8px;
+    };
+
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-50);
+    padding: 8px 14px;
+
+    @include hover {
+        background-color: var(--color-grey-dark);
+    }
+
+    &.isActive {
+        pointer-events: none;
+        background-color: var(--color-yellow);
+    }
+}
