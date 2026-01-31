@@ -1,12 +1,12 @@
 import CategoryButton from "@/shared/ui/CategoryButton"
 import styles from "./SelectCategory.module.scss"
-import useCategoryButton from "./model/useCategoryButton"
+import { memo } from "react"
 
-const SelectCategory = () => {
+const SelectCategory = (props) => {
     const {
         buttons,
-        handleChangeActiveTab
-    } = useCategoryButton()
+        onChangeActiveTab
+    } = props
 
     return (
         <div className={styles.category}>
@@ -18,7 +18,7 @@ const SelectCategory = () => {
                             title={title}
                             pathImg={pathImg}
                             isActive={isActive}
-                            onClick={() => handleChangeActiveTab(id)}
+                            onClick={() => onChangeActiveTab(id)}
                             ariaControls={ariaControls}
                         />
                     </li>
@@ -28,4 +28,4 @@ const SelectCategory = () => {
     )
 }
 
-export default SelectCategory
+export default memo(SelectCategory)
