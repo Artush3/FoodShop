@@ -6,11 +6,13 @@ const CategoryButton = (props) => {
         pathImg,
         title,
         isActive,
-        onClick
+        onClick,
+        activeButton
     } = props
 
     return (
         <button 
+            ref={isActive ? activeButton : null}
             role="tab"
             type="button" 
             className={clsx(styles.button, isActive ? styles.isActive : "")}

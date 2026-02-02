@@ -5,7 +5,8 @@ import { memo } from "react"
 const SelectCategory = (props) => {
     const {
         buttons,
-        onChangeActiveTab
+        onChangeActiveTab,
+        activeButton
     } = props
 
     const previousTab = () => {
@@ -64,6 +65,7 @@ const SelectCategory = (props) => {
                 {buttons.map(({id, title, pathImg, isActive}) => (
                     <li className={styles.item} key={id}>
                         <CategoryButton
+                            activeButton={activeButton}
                             title={title}
                             pathImg={pathImg}
                             isActive={isActive}

@@ -1,5 +1,6 @@
 import { memo } from "react"
 import styles from "./Сategory.module.scss"
+import Product from "../product/Product"
 
 const Category = (props) => {
     const {
@@ -14,9 +15,14 @@ const Category = (props) => {
         >
             <h2 className={styles.title}>{titleCategory.current}</h2>
             <ul className={styles.list}>
-                {products.map(({title}) => (
-                    <li key={title} className={styles.item}>
-                        <p>{title}</p>
+                {products.map(({id, image, price, title, weight}) => (
+                    <li key={id} className={styles.item}>
+                        <Product
+                            image={image}
+                            price={price}
+                            title={title}
+                            weight={weight}
+                        />
                     </li>
                 ))}
             </ul>

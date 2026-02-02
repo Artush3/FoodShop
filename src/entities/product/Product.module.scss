@@ -1,0 +1,22 @@
+.product {
+    background-color: var(--color-light);
+    padding: fluid(12, 4);
+    border-radius: var(--border-radius-18);
+}
+
+.title {
+    margin: fluid(8, 4) 0 fluid(29, 16);
+}
+
+.weight {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-grey-dark);
+}
+
+.description {
+    margin: fluid(16, 10) 0 8px;
+}
+
+.image {
+    width: 100%;
+}

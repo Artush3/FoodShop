@@ -1,0 +1,18 @@
+.category {
+    @include flex {
+        flex-direction: column;
+        row-gap: fluid(24, 16);
+    }
+
+    width: 100%;
+}
+
+.list {
+    @include grid(3) {
+        gap: fluid(30, 10);
+    }
+
+    @include screen-lg {
+        --gridColumns: 2;
+    }
+}

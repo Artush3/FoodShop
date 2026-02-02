@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import burgerIcon from "@/shared/assets/icons/category/burger.svg"
 import comboIcon from "@/shared/assets/icons/category/сombo.svg"
 import dessertsIcon from "@/shared/assets/icons/category/desserts.svg"
@@ -70,6 +70,8 @@ const useCatalog = () => {
         }))
     }, [activeTab])
 
+    const activeButton = useRef(null)
+
     const {
         titleCategory,
         gettitleCategory
@@ -81,6 +83,9 @@ const useCatalog = () => {
                 setActiveTab(idTab)
                 setProducts(result)
                 gettitleCategory(idTab)
+                setTimeout(() => {
+                    activeButton.current.focus()
+                }, 1)
             })
     }, [gettitleCategory])
 
@@ -93,7 +98,8 @@ const useCatalog = () => {
         buttons,
         products,
         titleCategory,
-        handleChangeActiveTab
+        handleChangeActiveTab,
+        activeButton
     }
 }
 

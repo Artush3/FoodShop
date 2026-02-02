@@ -1,0 +1,19 @@
+.button {
+    width: 100%;
+    background-color: var(--color-grey);
+    padding-block: 12px;
+    border-radius: var(--border-radius-12);
+
+    @include hover {
+        background-color: var(--color-grey-dark);
+    }
+
+    &.isAccent {
+        background-color: var(--color-accent-light);
+        color: var(--color-light);
+
+        @include hover {
+            background-color: var(--color-yellow);
+        }
+    }
+}

@@ -10,7 +10,8 @@ const Catalog = () => {
         buttons,
         products,
         titleCategory,
-        handleChangeActiveTab
+        handleChangeActiveTab,
+        activeButton
     } = useCatalog()
     
     return (
@@ -22,6 +23,7 @@ const Catalog = () => {
                 <SelectCategory 
                     buttons={buttons} 
                     onChangeActiveTab={handleChangeActiveTab} 
+                    activeButton={activeButton}
                 />
                 <div className={styles.action}>
                     <Basket />
