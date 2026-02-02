@@ -6,17 +6,13 @@ const CategoryButton = (props) => {
         pathImg,
         title,
         isActive,
-        onClick,
-        id,
-        ariaControls
+        onClick
     } = props
 
     return (
         <button 
-            id={id}
             role="tab"
             type="button" 
-            aria-controls={ariaControls}
             className={clsx(styles.button, isActive ? styles.isActive : "")}
             onClick={onClick}
             aria-selected={isActive}

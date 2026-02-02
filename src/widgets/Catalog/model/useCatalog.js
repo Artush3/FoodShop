@@ -9,6 +9,7 @@ import shawarmaIcon from "@/shared/assets/icons/category/shawarma.svg"
 import snacksIcon from "@/shared/assets/icons/category/snacks.svg"
 import wokIcon from "@/shared/assets/icons/category/wok.svg"
 import catalogAPI from "@/shared/api/catalog"
+import useGetTitle from "./useGetTitle"
 
 const useCatalog = () => {
     const [activeTab, setActiveTab] = useState("burgers")
@@ -20,55 +21,46 @@ const useCatalog = () => {
                 id: "burgers",
                 title: "Бургеры",
                 pathImg: burgerIcon,
-                ariaControls: "tabpanel-1"
             },
             {
                 id: "snacks",
                 title: "Закуски",
                 pathImg: snacksIcon,
-                ariaControls: "tabpanel-2"
             },
             {
                 id: "hotdogs",
                 title: "Хот-доги",
                 pathImg: hotDogsIcon,
-                ariaControls: "tabpanel-3"
             },
             {
                 id: "combo",
                 title: "Комбо",
                 pathImg: comboIcon,
-                ariaControls: "tabpanel-4"
             },
             {
                 id: "shawarma",
                 title: "Шаурма",
                 pathImg: shawarmaIcon,
-                ariaControls: "tabpanel-5",
             },
             {
                 id: "pizza",
                 title: "Пицца",
                 pathImg: pizzaIcon,
-                ariaControls: "tabpanel-6",
             },
             {
                 id: "wok",
                 title: "Вок",
                 pathImg: wokIcon,
-                ariaControls: "tabpanel-7",
             },
             {
                 id: "desserts",
                 title: "Десерты",
                 pathImg: dessertsIcon,
-                ariaControls: "tabpanel-8",
             },
             {
                 id: "sauces",
                 title: "Соусы",
                 pathImg: saucesIcon,
-                ariaControls: "tabpanel-9",
             }
         ]
     
@@ -77,12 +69,20 @@ const useCatalog = () => {
             isActive: element.id === activeTab
         }))
     }, [activeTab])
-    
+
+    const {
+        titleCategory,
+        gettitleCategory
+    } = useGetTitle()
+
     const handleChangeActiveTab = useCallback((idTab) => {
-        setActiveTab(idTab)
         catalogAPI.getAllByCatalog(idTab)
-            .then(setProducts)
-    }, [])
+            .then(result => {
+                setActiveTab(idTab)
+                setProducts(result)
+                gettitleCategory(idTab)
+            })
+    }, [gettitleCategory])
 
     useEffect(() => {
         catalogAPI.getAllByCatalog("burgers")
@@ -91,8 +91,9 @@ const useCatalog = () => {
     
     return {
         buttons,
-        handleChangeActiveTab,
-        products
+        products,
+        titleCategory,
+        handleChangeActiveTab
     }
 }
 

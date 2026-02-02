@@ -1,3 +1,16 @@
 .catalog {
     padding: fluid(40, 30) 0 fluid(100, 80);
 }
+
+.inner {
+    @include flex {
+        flex-direction: column;
+        row-gap: fluid(50, 30);
+    }
+}
+
+.action {
+    @include flex(start, space-between) {
+        column-gap: 30px;
+    };
+}
