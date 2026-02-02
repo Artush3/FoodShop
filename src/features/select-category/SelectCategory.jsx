@@ -1,13 +1,13 @@
 import CategoryButton from "@/shared/ui/CategoryButton"
 import styles from "./SelectCategory.module.scss"
-import { memo } from "react"
+import { memo, useContext } from "react"
+import { CatalogContext } from "@/widgets/Catalog/model/CatalogContext"
 
-const SelectCategory = (props) => {
+const SelectCategory = () => {
     const {
         buttons,
-        onChangeActiveTab,
-        activeButton
-    } = props
+        handleChangeActiveTab
+    } = useContext(CatalogContext)
 
     const previousTab = () => {
         const currentIndex = buttons.findIndex(element => element.isActive)
@@ -19,7 +19,7 @@ const SelectCategory = (props) => {
             nextIndex = buttons.at(-1).id
         }
 
-        onChangeActiveTab(nextIndex)
+        handleChangeActiveTab(nextIndex)
     }
 
     const nextTab = () => {
@@ -32,15 +32,15 @@ const SelectCategory = (props) => {
             nextIndex = buttons[0].id
         }
 
-        onChangeActiveTab(nextIndex)
+        handleChangeActiveTab(nextIndex)
     }
 
     const firstTab = () => {
-        onChangeActiveTab(buttons[0].id)
+        handleChangeActiveTab(buttons[0].id)
     }
 
     const lastTab = () => {
-        onChangeActiveTab(buttons.at(-1).id)
+        handleChangeActiveTab(buttons.at(-1).id)
     } 
 
     const handleKeyChangeActiveTab = (event) => {
@@ -65,11 +65,10 @@ const SelectCategory = (props) => {
                 {buttons.map(({id, title, pathImg, isActive}) => (
                     <li className={styles.item} key={id}>
                         <CategoryButton
-                            activeButton={activeButton}
                             title={title}
                             pathImg={pathImg}
                             isActive={isActive}
-                            onClick={() => onChangeActiveTab(id)}
+                            onClick={() => handleChangeActiveTab(id)}
                         />
                     </li>
                 ))}

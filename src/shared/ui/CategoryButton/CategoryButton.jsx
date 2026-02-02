@@ -1,14 +1,19 @@
 import clsx from "clsx"
 import styles from "./CategoryButton.module.scss"
+import { useContext } from "react"
+import { CatalogContext } from "@/widgets/Catalog/model/CatalogContext"
 
 const CategoryButton = (props) => {
     const {
         pathImg,
         title,
         isActive,
-        onClick,
-        activeButton
+        onClick
     } = props
+    
+    const {
+        activeButton
+    } = useContext(CatalogContext)
 
     return (
         <button 

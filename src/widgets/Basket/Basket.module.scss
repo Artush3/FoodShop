@@ -1,6 +1,25 @@
 .basket {
     width: 300px;
     flex-shrink: 0;
-    height: 467px;
     background-color: var(--color-light);
+    border-radius: var(--border-radius-18);
+    padding: fluid(24, 16) fluid(16, 10);
+}
+
+.counter {
+    @include flex(center);
+
+    padding: 2px fluid(17, 13);
+    border-radius: var(--border-radius-6);
+    background-color: var(--color-grey);
+}
+
+.header {
+    @include flex(center, space-between) {
+        column-gap: var(--default-gap);
+    }
+    
+    padding-bottom: fluid(12, 8);
+    margin-bottom: fluid(16, 11);
+    border-bottom: var(--border-grey);
 }

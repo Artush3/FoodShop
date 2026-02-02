@@ -2,6 +2,12 @@
     background-color: var(--color-light);
     padding: fluid(12, 4);
     border-radius: var(--border-radius-18);
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+        cursor: pointer;
+        scale: 1.03;
+    }
 }
 
 .title {

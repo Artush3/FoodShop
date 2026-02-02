@@ -12,6 +12,7 @@ import catalogAPI from "@/shared/api/catalog"
 import useGetTitle from "./useGetTitle"
 
 const useCatalog = () => {
+    const [basket, setBasket] = useState([])
     const [activeTab, setActiveTab] = useState("burgers")
     const [products, setProducts] = useState([])
     
@@ -77,6 +78,14 @@ const useCatalog = () => {
         gettitleCategory
     } = useGetTitle()
 
+    const handleAddItem = useCallback((idProduct) => {
+        const product = products.find(element => element.id === idProduct)
+
+        setBasket(prev => {
+            return [...prev, product]
+        })
+    }, [products])
+
     const handleChangeActiveTab = useCallback((idTab) => {
         catalogAPI.getAllByCatalog(idTab)
             .then(result => {
@@ -99,7 +108,9 @@ const useCatalog = () => {
         products,
         titleCategory,
         handleChangeActiveTab,
-        activeButton
+        activeButton,
+        basket,
+        handleAddItem
     }
 }
 

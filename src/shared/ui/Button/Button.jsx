@@ -4,12 +4,14 @@ import styles from "./Button.module.scss"
 const Button = (props) => {
     const {
         isAccent,
-        title
+        title,
+        onClick
     } = props
 
     return (
         <button 
             type="button"
+            onClick={onClick}
             className={clsx(styles.button, isAccent ? styles["isAccent"] : "")}
         >
             {title}

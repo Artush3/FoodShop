@@ -2,38 +2,25 @@ import SelectCategory from "@/features/select-category"
 import styles from "./Catalog.module.scss"
 import clsx from "clsx"
 import Category from "@/entities/category"
-import useCatalog from "./model/useCatalog"
 import Basket from "@/widgets/Basket"
+import CatalogProvider from "./model/CatalogContext"
 
 const Catalog = () => {
-    const {
-        buttons,
-        products,
-        titleCategory,
-        handleChangeActiveTab,
-        activeButton
-    } = useCatalog()
-    
     return (
-        <section 
-            className={styles.catalog} 
-            aria-label="Меню и корзина"
-        >
-            <div className={clsx(styles.inner, "container")}>
-                <SelectCategory 
-                    buttons={buttons} 
-                    onChangeActiveTab={handleChangeActiveTab} 
-                    activeButton={activeButton}
-                />
-                <div className={styles.action}>
-                    <Basket />
-                    <Category 
-                        products={products}
-                        titleCategory={titleCategory}
-                    />
+        <CatalogProvider>
+            <section 
+                className={styles.catalog} 
+                aria-labelledby="menu-title"
+            >
+                <div className={clsx(styles.inner, "container")}>
+                    <SelectCategory />
+                    <div className={styles.action}>
+                        <Basket />
+                        <Category />
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </CatalogProvider>
     )
 }
 

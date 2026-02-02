@@ -1,18 +1,26 @@
 import AddToBasket from "@/features/add-to-basket"
 import styles from "./Product.module.scss"
+import { useContext } from "react"
+import { CatalogContext } from "@/widgets/Catalog/model/CatalogContext"
 
 const Product = (props) => {
     const {
+        id,
         image,
         price,
         title,
         weight
     } = props
 
+    const {
+        handleAddItem
+    } = useContext(CatalogContext)
+
     return (
         <article 
             className={styles.product}
             role="button"
+            onClick={() => console.log("карточка продукта")}
         >
             <img 
                 src={image} 
@@ -27,7 +35,7 @@ const Product = (props) => {
                 <p className={styles.title}>{title}</p>
                 <p className={styles.weight}>{weight}г</p>
             </div>
-            <AddToBasket />
+            <AddToBasket onClick={() => handleAddItem(id)} />
         </article>
     )
 }

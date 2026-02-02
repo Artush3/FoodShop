@@ -1,8 +1,18 @@
 import Button from "@/shared/ui/Button"
 
-const AddToBasket = () => {
+const AddToBasket = (props) => {
+    const {
+        onClick
+    } = props
+
+    const handleClick = (event) => {
+        event.stopPropagation()
+
+        onClick()
+    }
+
     return (
-        <Button title="Добавить" />
+        <Button title="Добавить" onClick={handleClick} />
     )
 }
 
