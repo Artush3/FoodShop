@@ -9,8 +9,9 @@ const SelectCategory = () => {
         handleChangeActiveTab
     } = useContext(CatalogContext)
 
+    const currentIndex = buttons.findIndex(element => element.isActive)
+
     const previousTab = () => {
-        const currentIndex = buttons.findIndex(element => element.isActive)
         let nextIndex = "burgers"
 
         if(currentIndex !== 0) {
@@ -23,7 +24,6 @@ const SelectCategory = () => {
     }
 
     const nextTab = () => {
-        const currentIndex = buttons.findIndex(element => element.isActive)
         let nextIndex = "burgers"
 
         if(currentIndex !== buttons.length - 1) {

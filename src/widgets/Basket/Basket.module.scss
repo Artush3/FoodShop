@@ -14,6 +14,25 @@
     background-color: var(--color-grey);
 }
 
+.block {
+    margin-bottom: fluid(24, 19);
+
+    @include flex(center, space-between);
+}
+
+.delivery {
+    font-size: 12px;
+    margin-top: 8px;
+
+    @include flex(center, $isInline: true) {
+        column-gap: 8px;
+    }
+}
+
+.footer {
+    padding-top: 16px;
+}
+
 .header {
     @include flex(center, space-between) {
         column-gap: var(--default-gap);
@@ -22,4 +41,11 @@
     padding-bottom: fluid(12, 8);
     margin-bottom: fluid(16, 11);
     border-bottom: var(--border-grey);
+}
+
+.list {
+    @include flex {
+        flex-direction: column;
+        row-gap: fluid(16, 10);
+    }
 }

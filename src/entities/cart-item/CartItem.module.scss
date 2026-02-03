@@ -1,0 +1,25 @@
+.cart {
+    @include flex(center, space-between) {
+        column-gap: 6px
+    };
+
+    font-size: 12px;
+
+    padding-bottom: fluid(16, 11);
+    border-bottom: var(--border-grey);
+}
+
+.weight {
+    color: var(--color-grey-dark);
+    margin-bottom: 6px;
+}
+
+.description {
+    margin-right: auto;
+}
+
+.action {
+    width: 84px;
+    height: 40px;
+    background-color: var(--color-grey);
+}

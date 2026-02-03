@@ -19,8 +19,18 @@ body {
     }
 }
 
+p {
+    margin: 0;
+}
+
 main {
     flex-grow: 1;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 h1, .h1,
