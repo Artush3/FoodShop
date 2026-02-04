@@ -2,8 +2,8 @@ import { memo, useContext } from "react"
 import styles from "./Basket.module.scss"
 import { BasketContext } from "../Catalog/model/CatalogContext"
 import CartItem from "@/entities/cart-item"
-import Button from "@/shared/ui/Button"
 import deliveryIcon from "@/shared/assets/icons/basket/delivery.svg"
+import PlaceOrder from "@/features/place-order"
 
 const Basket = () => {
     const {
@@ -63,7 +63,7 @@ const Basket = () => {
                     <p className={styles.result}>Итог</p>
                     <p className={styles.sum}>{sum}₽</p>
                 </div>
-                <Button title="Оформить заказ" isAccent />
+                <PlaceOrder />
                 {sum > 599 && (
                     <div className={styles.delivery}>
                         <img src={deliveryIcon} alt="" width={24} height={24} className={styles.icon} loading="lazy" />

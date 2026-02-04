@@ -1,0 +1,9 @@
+.wrapper {
+    @include flex(center, $isInline: true) {
+        column-gap: 18px;
+    }
+
+    padding: fluid(9, 8) fluid(12, 8);
+    background-color: var(--color-grey);
+    border-radius: var(--border-radius-12);
+}

@@ -1,5 +1,6 @@
 import { memo } from "react"
 import styles from "./CartItem.module.scss"
+import ChangeQuantity from "@/features/change-quantity"
 
 const CartItem = (props) => {
     const {
@@ -17,7 +18,7 @@ const CartItem = (props) => {
                 <p className={styles.weight}>{weight}г</p>
                 <p className={styles.price}>{price}₽</p>
             </div>
-            <div className={styles.action}></div>
+            <ChangeQuantity />
         </article>
     )
 }
