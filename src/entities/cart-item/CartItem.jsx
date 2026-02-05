@@ -4,6 +4,7 @@ import ChangeQuantity from "@/features/change-quantity"
 
 const CartItem = (props) => {
     const {
+        id,
         image,
         title,
         weight,
@@ -18,7 +19,7 @@ const CartItem = (props) => {
                 <p className={styles.weight}>{weight}г</p>
                 <p className={styles.price}>{price}₽</p>
             </div>
-            <ChangeQuantity />
+            <ChangeQuantity id={id} />
         </article>
     )
 }

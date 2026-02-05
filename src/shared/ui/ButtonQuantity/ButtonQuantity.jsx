@@ -1,18 +1,21 @@
+import { memo } from "react"
 import styles from "./ButtonQuantity.module.scss"
 
 const ButtonQuantity = (props) => {
     const {
-        sign
+        sign,
+        onClick
     } = props
 
     return (
         <button 
             type="button" 
             className={styles.button}
+            onClick={onClick}
         >
             {sign}
         </button>
     )
 }
 
-export default ButtonQuantity
+export default memo(ButtonQuantity)

@@ -10,17 +10,13 @@ const Basket = () => {
         basket
     } = useContext(BasketContext)
 
-    const length = basket.length
-    let sum = 0
-
-    if(length > 0) {
-        sum = basket.map(element => {
-            return {
-                ...element,
-                price: +element.price
-            }
-        }).reduce((prev, next) => prev + next.price, 0)
-    }
+    const length = basket.reduce((prev, next) => prev + next.quantity, 0)
+    let sum = length > 0 ? basket.map(element => {
+        return {
+            ...element,
+            price: +element.price
+        }
+    }).reduce((prev, next) => prev + next.price * next.quantity, 0) : 0
 
     if(basket.length === 0) {
         return <div className={styles.basket}>
@@ -49,6 +45,7 @@ const Basket = () => {
                     {basket.map(({id, image, title, weight, price}) => (
                         <li key={id} className={styles.item}>
                             <CartItem
+                                id={id}
                                 image={image}
                                 title={title}
                                 weight={weight}

@@ -12,25 +12,13 @@ const SelectCategory = () => {
     const currentIndex = buttons.findIndex(element => element.isActive)
 
     const previousTab = () => {
-        let nextIndex = "burgers"
-
-        if(currentIndex !== 0) {
-            nextIndex = buttons[currentIndex - 1].id
-        } else {
-            nextIndex = buttons.at(-1).id
-        }
+        let nextIndex = currentIndex !== 0 ? buttons[currentIndex - 1].id : buttons.at(-1).id
 
         handleChangeActiveTab(nextIndex)
     }
 
     const nextTab = () => {
-        let nextIndex = "burgers"
-
-        if(currentIndex !== buttons.length - 1) {
-            nextIndex = buttons[currentIndex + 1].id
-        } else {
-            nextIndex = buttons[0].id
-        }
+        let nextIndex = currentIndex !== buttons.length - 1 ? buttons[currentIndex + 1].id : buttons[0].id
 
         handleChangeActiveTab(nextIndex)
     }

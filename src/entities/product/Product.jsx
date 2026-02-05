@@ -20,7 +20,6 @@ const Product = (props) => {
         <article 
             className={styles.product}
             role="button"
-            onClick={() => console.log("карточка продукта")}
         >
             <img 
                 src={image} 
