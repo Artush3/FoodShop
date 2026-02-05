@@ -1,4 +1,4 @@
-import { memo, useContext } from "react"
+import { useContext } from "react"
 import styles from "./Basket.module.scss"
 import { BasketContext } from "../Catalog/model/CatalogContext"
 import CartItem from "@/entities/cart-item"
@@ -75,4 +75,4 @@ const Basket = () => {
     )
 }
 
-export default memo(Basket)
+export default Basket

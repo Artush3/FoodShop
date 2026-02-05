@@ -1,4 +1,4 @@
-import { memo, useContext } from "react"
+import { useContext } from "react"
 import styles from "./Сategory.module.scss"
 import Product from "../product/Product"
 import { CatalogContext } from "@/widgets/Catalog/model/CatalogContext"
@@ -32,4 +32,4 @@ const Category = () => {
     )
 }
 
-export default memo(Category)
+export default Category

@@ -1,6 +1,6 @@
 import CategoryButton from "@/shared/ui/CategoryButton"
 import styles from "./SelectCategory.module.scss"
-import { memo, useContext } from "react"
+import { useContext } from "react"
 import { CatalogContext } from "@/widgets/Catalog/model/CatalogContext"
 
 const SelectCategory = () => {
@@ -77,4 +77,4 @@ const SelectCategory = () => {
     )
 }
 
-export default memo(SelectCategory)
+export default SelectCategory

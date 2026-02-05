@@ -1,4 +1,5 @@
 import Button from "@/shared/ui/Button"
+import { memo } from "react"
 
 const PlaceOrder = () => {
     return (
@@ -6,4 +7,4 @@ const PlaceOrder = () => {
     )
 }
 
-export default PlaceOrder
+export default memo(PlaceOrder)

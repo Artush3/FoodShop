@@ -1,6 +1,5 @@
 import clsx from "clsx"
 import styles from "./Button.module.scss"
-import { memo } from "react"
 
 const Button = (props) => {
     const {
@@ -20,4 +19,4 @@ const Button = (props) => {
     )
 }
 
-export default memo(Button)
+export default Button
