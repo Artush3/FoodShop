@@ -15,8 +15,8 @@ const Catalog = () => {
                 <div className={clsx(styles.inner, "container")}>
                     <SelectCategory />
                     <div className={styles.action}>
-                        <Basket />
                         <Category />
+                        <Basket />
                     </div>
                 </div>
             </section>

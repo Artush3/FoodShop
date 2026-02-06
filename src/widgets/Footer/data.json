@@ -1,0 +1,10 @@
+[
+    {
+        "title": "vk",
+        "iconPath": "/src/shared/assets/icons/soc1al/vk-icon.svg"
+    },
+    {
+        "title": "telegram",
+        "iconPath": "/src/shared/assets/icons/soc1al/telegram-icon.svg"
+    }
+]

@@ -1,0 +1,5 @@
+.link {
+    @include hover {
+        scale: 1.3;
+    }
+}

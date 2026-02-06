@@ -1,0 +1,53 @@
+.footer {
+    background-color: var(--color-light);
+    padding: fluid(52, 24) 0 fluid(40, 26);
+}
+
+.inner {
+    @include flex {
+        flex-direction: column;
+        row-gap: 34px;
+    }
+}
+
+.cap {
+    @include flex(center, space-between) {
+        column-gap: var(--default-gap);
+        flex-wrap: wrap;
+        row-gap: 24px;
+    }
+}
+
+.number {
+    @include flex(center) {
+        column-gap: 4px;
+    }
+}
+
+.info {
+    @include flex {
+        flex-direction: column;
+        row-gap: 4px;
+    }
+}
+
+.text {
+    font-style: normal;
+}
+
+.social {
+    @include flex(center) {
+        column-gap: 16px;
+    }
+}
+
+.contact {
+    @include flex {
+        flex-direction: column;
+        row-gap: fluid(24, 8);
+    }
+}
+
+.logo {
+    width: fluid(300, 196);
+}

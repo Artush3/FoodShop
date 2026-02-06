@@ -15,4 +15,16 @@
     @include screen-lg {
         --gridColumns: 2;
     }
+
+    @include screen-md {
+        --gridColumns: 4;
+    }
+
+    @include screen-sm {
+        --gridColumns: 3;
+    }
+
+    @include screen-xs {
+        --gridColumns: 2;
+    }
 }

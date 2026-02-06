@@ -13,4 +13,9 @@
     @include flex(start, space-between) {
         column-gap: 30px;
     };
+
+    @include screen-md {
+        row-gap: 30px;
+        flex-direction: column;
+    }
 }

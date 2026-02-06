@@ -3,10 +3,6 @@ html {
 }
 
 body {
-    @include flex {
-        flex-direction: column;
-    }
-
     overflow-x: hidden;
     font-family: var(--font-family-primary);
     font-size: fluid(16, 12);
@@ -21,10 +17,6 @@ body {
 
 p {
     margin: 0;
-}
-
-main {
-    flex-grow: 1;
 }
 
 ul, ol {
