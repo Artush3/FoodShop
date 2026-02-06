@@ -1,6 +1,5 @@
 import { useCallback, useRef } from "react"
 
-
 const useGetTitle = () => {
     let titleCategory = useRef("Бургеры")
 

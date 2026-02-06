@@ -1,5 +1,6 @@
 import { createContext, useMemo } from "react";
 import useCatalog from "./useCatalog";
+import useBasket from "./useBasket";
 
 export const CatalogContext = createContext({})
 export const BasketContext = createContext({})
@@ -14,10 +15,14 @@ const CatalogProvider = (props) => {
         products,
         titleCategory,
         handleChangeActiveTab,
-        activeButton,
-        basket,
-        handleAddItem
+        activeButton
     } = useCatalog()
+
+    const {
+        basket,
+        handleAddItem,
+        handleChangeQuantity
+    } = useBasket(products)
 
     const catalogValue = useMemo(() => {
         return {
@@ -39,10 +44,12 @@ const CatalogProvider = (props) => {
 
     const basketValue = useMemo(() => {
         return {
-            basket
+            basket,
+            handleChangeQuantity
         }
     }, [
-        basket
+        basket,
+        handleChangeQuantity
     ])
 
     return (

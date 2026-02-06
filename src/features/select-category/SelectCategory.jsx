@@ -2,6 +2,7 @@ import CategoryButton from "@/shared/ui/CategoryButton"
 import styles from "./SelectCategory.module.scss"
 import { useContext } from "react"
 import { CatalogContext } from "@/widgets/Catalog/model/CatalogContext"
+import useSelectCategory from "./model/useSelectCategory"
 
 const SelectCategory = () => {
     const {
@@ -9,40 +10,9 @@ const SelectCategory = () => {
         handleChangeActiveTab
     } = useContext(CatalogContext)
 
-    const currentIndex = buttons.findIndex(element => element.isActive)
-
-    const previousTab = () => {
-        let nextIndex = currentIndex !== 0 ? buttons[currentIndex - 1].id : buttons.at(-1).id
-
-        handleChangeActiveTab(nextIndex)
-    }
-
-    const nextTab = () => {
-        let nextIndex = currentIndex !== buttons.length - 1 ? buttons[currentIndex + 1].id : buttons[0].id
-
-        handleChangeActiveTab(nextIndex)
-    }
-
-    const firstTab = () => {
-        handleChangeActiveTab(buttons[0].id)
-    }
-
-    const lastTab = () => {
-        handleChangeActiveTab(buttons.at(-1).id)
-    } 
-
-    const handleKeyChangeActiveTab = (event) => {
-        const { code } = event
-
-        const action = {
-            ArrowLeft: previousTab,
-            ArrowRight:nextTab,
-            Home: firstTab,
-            End: lastTab,
-        }[code]
-
-        action?.()
-    }
+    const {
+        handleKeyChangeActiveTab
+    } = useSelectCategory(buttons, handleChangeActiveTab)
 
     return (
         <div 
