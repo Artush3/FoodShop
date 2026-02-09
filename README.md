@@ -1,16 +1,79 @@
-# React + Vite
+# 🍔 YourMeal — Онлайн-магазин фастфуда
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+YourMeal — современный веб-приложение для заказа фастфуда, разработанное на нативном React с использованием JavaScript. Платформа предлагает интуитивный интерфейс для выбора блюд.
 
-Currently, two official plugins are available:
+## ✨ Особенности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🛒 **Полнофункциональный каталог** — категории бургеров, пиццы, напитков и десертов
+- 🔍 **Умный поиск и фильтрация** — по категориям
+- 📦 **Корзина покупок** — добавление/удаление товаров, изменение количества
+- 📱 **Адаптивный дизайн** — корректное отображение на всех устройствах
+- ⚡ **Высокая производительность** — оптимизированная загрузка и рендеринг
 
-## React Compiler
+## 🛠 Технологический стек
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React 18** — функциональные компоненты, хуки (useState, useEffect, useContext, useReducer)
+- **JavaScript** — динамическая типизация
+- **Vite** — сборка и development сервер
+- **React Router** — навигация между страницами
+- **Context API** — глобальное состояние (корзина, пользователь)
+- **SCSS** — стилизация и адаптивный дизайн
+- **Fetch** — HTTP-запросы к API
 
-## Expanding the ESLint configuration
+## 🚀 Быстрый старт
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Клонирование репозитория
+```bash
+git clone https://github.com/Artush3/FoodShop.git
+cd foodshop
+```
+
+### 2. Установка зависимостей
+```bash
+npm install
+```
+
+### 3. Запуск локального сервера
+```bash
+npm run server
+```
+
+### 4. Запуск в режиме разработки
+```bash
+npm run dev
+```
+
+Приложение будет доступно по адресу: [http://localhost:5173](http://localhost:5173)
+
+### 4. Сборка для production
+```bash
+npm run build
+# или
+yarn build
+```
+
+### 5. Просмотр сборки
+```bash
+npm run preview
+# или
+yarn preview
+```
+
+## 📦 Основные функциональные модули
+
+### Каталог товаров
+- Отображение товаров с фотографиями, описанием и ценами
+- Фильтрация по категориям (бургеры, пицца, напитки, десерты)
+- Пагинация и бесконечная прокрутка
+
+### Корзина покупок
+- Добавление/удаление товаров
+- Изменение количества
+- Автоматический расчет стоимости
+- Сохранение состояния между сессиями
+
+## 🔒 Безопасность
+
+- Защита от XSS атак
+- HTTPS для всех запросов
+- Безопасное хранение токенов
