@@ -1,5 +1,5 @@
 {
-    "burgers": [
+    "products": [
         {
             "title": "Мясная бомба",
             "description": "Супер мясное наслаждение! Большая рубленая котлета из свежего говяжьего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести.",
@@ -13,7 +13,8 @@
             "weight": "520",
             "calories": "430",
             "price": "689",
-            "image": "/src/shared/assets/images/catalog/burgers/1.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/1.svg",
+            "category": "burgers"
         },
         {
             "title": "Супер сырный",
@@ -30,7 +31,8 @@
             "weight": "512",
             "calories": "480",
             "price": "550",
-            "image": "/src/shared/assets/images/catalog/burgers/2.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/2.svg",
+            "category": "burgers"
         },
         {
             "title": "Сытный",
@@ -47,7 +49,8 @@
             "weight": "580",
             "calories": "620",
             "price": "639",
-            "image": "/src/shared/assets/images/catalog/burgers/3.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/3.svg",
+            "category": "burgers"
         },
         {
             "title": "Тяжелый удар",
@@ -63,7 +66,8 @@
             "weight": "470",
             "calories": "700",
             "price": "480",
-            "image": "/src/shared/assets/images/catalog/burgers/4.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/4.svg",
+            "category": "burgers"
         },
         {
             "title": "Вечная классика",
@@ -81,7 +85,8 @@
             "weight": "450",
             "calories": "450",
             "price": "450",
-            "image": "/src/shared/assets/images/catalog/burgers/5.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/5.svg",
+            "category": "burgers"
         },
         {
             "title": "Итальянский",
@@ -98,10 +103,9 @@
             "weight": "510",
             "calories": "520",
             "price": "560",
-            "image": "/src/shared/assets/images/catalog/burgers/6.svg"
-        }
-    ],
-    "snacks": [
+            "image": "/src/shared/assets/images/catalog/burgers/6.svg",
+            "category": "burgers"
+        },
         {
             "title": "Начос",
             "description": "Хрустящие начос с сырным соусом и специями.",
@@ -115,7 +119,8 @@
             "weight": "220",
             "calories": "320",
             "price": "250",
-            "image": "/src/shared/assets/images/catalog/snacks/1.svg"
+            "image": "/src/shared/assets/images/catalog/snacks/1.svg",
+            "category": "snacks"
         },
         {
             "title": "Картошка фри",
@@ -128,7 +133,8 @@
             "weight": "180",
             "calories": "280",
             "price": "245",
-            "image": "/src/shared/assets/images/catalog/snacks/2.svg"
+            "image": "/src/shared/assets/images/catalog/snacks/2.svg",
+            "category": "snacks"
         },
         {
             "title": "Луковые кольца",
@@ -142,10 +148,9 @@
             "weight": "160",
             "calories": "290",
             "price": "230",
-            "image": "/src/shared/assets/images/catalog/snacks/3.svg"
-        }
-    ],
-    "hotdogs": [
+            "image": "/src/shared/assets/images/catalog/snacks/3.svg",
+            "category": "snacks"
+        },
         {
             "title": "Домашний хот-дог",
             "description": "Домашний хот-дог с натуральной сосиской и свежими овощами.",
@@ -161,7 +166,8 @@
             "weight": "250",
             "calories": "280",
             "price": "290",
-            "image": "/src/shared/assets/images/catalog/hotdogs/1.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/1.svg",
+            "category": "hotdogs"
         },
         {
             "title": "Жгучий хот-дог",
@@ -177,7 +183,8 @@
             "weight": "245",
             "calories": "320",
             "price": "239",
-            "image": "/src/shared/assets/images/catalog/hotdogs/2.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/2.svg",
+            "category": "hotdogs"
         },
         {
             "title": "Классический хот-дог",
@@ -192,10 +199,9 @@
             "weight": "215",
             "calories": "260",
             "price": "220",
-            "image": "/src/shared/assets/images/catalog/hotdogs/3.svg"
-        }
-    ],
-    "combo": [
+            "image": "/src/shared/assets/images/catalog/hotdogs/3.svg",
+            "category": "hotdogs"
+        },
         {
             "title": "Бургер Комбо",
             "description": "Любой бургер + картошка фри + напиток на выбор. Идеальный набор для сытного обеда.",
@@ -207,7 +213,8 @@
             "weight": "800",
             "calories": "850",
             "price": "799",
-            "image": "/src/shared/assets/images/catalog/burgers/1.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/1.svg",
+            "category": "combo"
         },
         {
             "title": "Хот-дог Комбо",
@@ -220,7 +227,8 @@
             "weight": "600",
             "calories": "720",
             "price": "599",
-            "image": "/src/shared/assets/images/catalog/burgers/2.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/2.svg",
+            "category": "combo"
         },
         {
             "title": "Семейный Комбо",
@@ -234,10 +242,9 @@
             "weight": "1500",
             "calories": "1800",
             "price": "1499",
-            "image": "/src/shared/assets/images/catalog/burgers/3.svg"
-        }
-    ],
-    "shawarma": [
+            "image": "/src/shared/assets/images/catalog/burgers/3.svg",
+            "category": "combo"
+        },
         {
             "title": "Шаурма Классическая",
             "description": "Свежая шаурма с курицей, овощами и фирменным соусом в лаваше.",
@@ -253,7 +260,8 @@
             "weight": "350",
             "calories": "420",
             "price": "390",
-            "image": "/src/shared/assets/images/catalog/snacks/1.svg"
+            "image": "/src/shared/assets/images/catalog/snacks/1.svg",
+            "category": "shawarma"
         },
         {
             "title": "Шаурма Острая",
@@ -270,7 +278,8 @@
             "weight": "370",
             "calories": "450",
             "price": "430",
-            "image": "/src/shared/assets/images/catalog/snacks/2.svg"
+            "image": "/src/shared/assets/images/catalog/snacks/2.svg",
+            "category": "shawarma"
         },
         {
             "title": "Шаурма Сырная",
@@ -287,10 +296,9 @@
             "weight": "380",
             "calories": "520",
             "price": "460",
-            "image": "/src/shared/assets/images/catalog/snacks/3.svg"
-        }
-    ],
-    "pizza": [
+            "image": "/src/shared/assets/images/catalog/snacks/3.svg",
+            "category": "shawarma"
+        },
         {
             "title": "Пепперони",
             "description": "Классическая пицца с колбасками пепперони и сыром моцарелла.",
@@ -304,7 +312,8 @@
             "weight": "600",
             "calories": "780",
             "price": "699",
-            "image": "/src/shared/assets/images/catalog/hotdogs/1.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/1.svg",
+            "category": "pizza"
         },
         {
             "title": "Маргарита",
@@ -319,7 +328,8 @@
             "weight": "550",
             "calories": "650",
             "price": "649",
-            "image": "/src/shared/assets/images/catalog/hotdogs/2.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/2.svg",
+            "category": "pizza"
         },
         {
             "title": "Четыре Сыра",
@@ -335,10 +345,9 @@
             "weight": "580",
             "calories": "820",
             "price": "749",
-            "image": "/src/shared/assets/images/catalog/hotdogs/3.svg"
-        }
-    ],
-    "wok": [
+            "image": "/src/shared/assets/images/catalog/hotdogs/3.svg",
+            "category": "pizza"
+        },
         {
             "title": "Лапша с курицей",
             "description": "Жареная лапша с кусочками курицы, овощами и соевым соусом.",
@@ -354,7 +363,8 @@
             "weight": "450",
             "calories": "520",
             "price": "490",
-            "image": "/src/shared/assets/images/catalog/burgers/4.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/4.svg",
+            "category": "wok"
         },
         {
             "title": "Рис с морепродуктами",
@@ -371,7 +381,8 @@
             "weight": "480",
             "calories": "480",
             "price": "590",
-            "image": "/src/shared/assets/images/catalog/burgers/5.svg"
+            "image": "/src/shared/assets/images/catalog/burgers/5.svg",
+            "category": "wok"
         },
         {
             "title": "Овощной вок",
@@ -388,10 +399,9 @@
             "weight": "420",
             "calories": "380",
             "price": "430",
-            "image": "/src/shared/assets/images/catalog/burgers/6.svg"
-        }
-    ],
-    "desserts": [
+            "image": "/src/shared/assets/images/catalog/burgers/6.svg",
+            "category": "wok"
+        },
         {
             "title": "Чизкейк Нью-Йорк",
             "description": "Классический чизкейк с нежной творожной основой и ванильным вкусом.",
@@ -406,7 +416,8 @@
             "weight": "180",
             "calories": "420",
             "price": "320",
-            "image": "/src/shared/assets/images/catalog/snacks/1.svg"
+            "image": "/src/shared/assets/images/catalog/snacks/1.svg",
+            "category": "desserts"
         },
         {
             "title": "Молочный коктейль",
@@ -420,7 +431,8 @@
             "weight": "400",
             "calories": "350",
             "price": "280",
-            "image": "/src/shared/assets/images/catalog/snacks/2.svg"
+            "image": "/src/shared/assets/images/catalog/snacks/2.svg",
+            "category": "desserts"
         },
         {
             "title": "Брауни",
@@ -435,10 +447,9 @@
             "weight": "200",
             "calories": "480",
             "price": "290",
-            "image": "/src/shared/assets/images/catalog/snacks/3.svg"
-        }
-    ],
-    "sauces": [
+            "image": "/src/shared/assets/images/catalog/snacks/3.svg",
+            "category": "desserts"
+        },
         {
             "title": "Соус Кисло-Сладкий",
             "description": "Традиционный кисло-сладкий соус для блюд азиатской кухни.",
@@ -452,7 +463,8 @@
             "weight": "50",
             "calories": "80",
             "price": "70",
-            "image": "/src/shared/assets/images/catalog/hotdogs/1.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/1.svg",
+            "category": "sauces"
         },
         {
             "title": "Соус Сырный",
@@ -467,7 +479,8 @@
             "weight": "60",
             "calories": "120",
             "price": "80",
-            "image": "/src/shared/assets/images/catalog/hotdogs/2.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/2.svg",
+            "category": "sauces"
         },
         {
             "title": "Соус Барбекю",
@@ -482,7 +495,8 @@
             "weight": "55",
             "calories": "90",
             "price": "75",
-            "image": "/src/shared/assets/images/catalog/hotdogs/3.svg"
+            "image": "/src/shared/assets/images/catalog/hotdogs/3.svg",
+            "category": "sauces"
         }
     ]
 }
