@@ -6,7 +6,7 @@ interface Props {
     children: ReactNode
 }
 
-export const CatalogContext = createContext<ICatalogContext>({})
+export const CatalogContext = createContext<ICatalogContext | null>(null)
 
 const CatalogProvider = (props: Props) => {
     const {
