@@ -7,6 +7,7 @@
     --color-light-dark: #F9F9F9;
     --color-grey-dark: #B1B1B1;
     --color-accent-light: #FF7020;
+    --color-dark-transparent: rgba(0, 0, 0, 0.80);;
 
     --default-gap: 15px;
 
@@ -30,4 +31,6 @@
 
     --container-width: #{$container-desktop-width}px;
     --container-padding-x: #{fluid(32, 10)};
+
+    --z-index-1000: 1000;
 }

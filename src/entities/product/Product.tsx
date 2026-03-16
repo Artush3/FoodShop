@@ -1,6 +1,7 @@
 import AddToBasket from "@/features/add-to-basket"
 import styles from "./Product.module.scss"
 import { IItem } from "@/shared/types"
+import useProduct from "./model/useProduct"
 
 const Product = (props: IItem) => {
     const {
@@ -11,10 +12,13 @@ const Product = (props: IItem) => {
         weight
     } = props
 
+    const openDetailsFunction = useProduct(id)
+
     return (
         <article 
             className={styles.product}
             role="button"
+            onClick={openDetailsFunction}
         >
             <img 
                 src={image} 

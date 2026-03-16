@@ -1,0 +1,6 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-dark-transparent);
+    z-index: var(--z-index-1000);
+}
