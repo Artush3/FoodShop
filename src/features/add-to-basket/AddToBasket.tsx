@@ -3,12 +3,14 @@ import Button from "@/shared/ui/button"
 import { MouseEvent } from 'react';
 
 interface Props {
+    isAccent?: boolean,
     id: string
 }
 
 const AddToBasket = (props: Props) => {
     const {
-        id
+        id,
+        isAccent
     } = props
 
     const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
@@ -18,7 +20,11 @@ const AddToBasket = (props: Props) => {
     }
 
     return (
-        <Button title="Добавить" onClick={handleClick} />
+        <Button 
+            title="Добавить" 
+            onClick={handleClick}
+            isAccent={isAccent}
+        />
     )
 }
 

@@ -1,0 +1,40 @@
+.body {
+    height: 100%;
+
+    @include flex($justify-content: space-between) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    @include flex {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    max-height: 220px;
+    overflow-y: scroll;
+}
+
+.information {
+    @include flex(start, space-between) {
+        column-gap: fluid(16, 8);
+    }
+}
+
+.compound {
+    @include flex {
+        flex-direction: column;
+        row-gap: 2px;
+    }
+}
+
+.textWeight {
+    color: var(--color-grey-dark);
+}
+
+.order {
+    @include flex(center, space-between) {
+        column-gap: var(--default-gap);
+    }
+}
