@@ -1,11 +1,11 @@
 import { useNavigate, useLocation } from 'react-router'
 
-const useProduct = (id: string) => {
+const useNavigateWithBackground = (path: string) => {
     const navigate = useNavigate()
     const location = useLocation()
 
     const openDetails = () => {
-        navigate(`/food/${id}`, {
+        navigate(path, {
             state: { background: location }
         })
     }
@@ -13,4 +13,4 @@ const useProduct = (id: string) => {
     return openDetails
 }
 
-export default useProduct
+export default useNavigateWithBackground

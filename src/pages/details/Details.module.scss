@@ -3,6 +3,7 @@
 
     @include flex($justify-content: space-between) {
         flex-direction: column;
+        row-gap: 12px;
     }
 }
 
@@ -19,6 +20,12 @@
 .information {
     @include flex(start, space-between) {
         column-gap: fluid(16, 8);
+    }
+
+    @include screen-xs {
+        flex-direction: column;
+        row-gap: 16px;
+        margin-bottom: auto;
     }
 }
 

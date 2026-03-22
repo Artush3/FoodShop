@@ -1,12 +1,8 @@
-import { useNavigate } from 'react-router'
-import { useEffect, useCallback } from 'react'
+import { useEffect } from 'react'
+import useCloseModal from '@/shared/hooks/useCloseModal'
 
 const useModal = () => {
-    const navigate = useNavigate()
-
-    const close = useCallback(() => {
-        navigate(-1)
-    }, [navigate])
+    const close = useCloseModal()
 
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => {

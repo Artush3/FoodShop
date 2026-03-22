@@ -1,5 +1,5 @@
 import catalogAPI from '@/shared/api/catalog'
-import { useRequiredParams } from '@/shared/lib/useRequiredParams'
+import { useRequiredParams } from '@/shared/hooks/useRequiredParams'
 import { IProduct } from '@/shared/types'
 import { useEffect, useState } from 'react'
 

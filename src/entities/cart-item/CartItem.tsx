@@ -1,5 +1,6 @@
 import styles from "./CartItem.module.scss"
 import ChangeQuantity from "@/features/change-quantity"
+import receiveRubles from "@/shared/lib/receiveRubles"
 import { IItem } from "@/shared/types"
 
 const CartItem = (props: IItem) => {
@@ -17,7 +18,7 @@ const CartItem = (props: IItem) => {
             <div className={styles.description}>
                 <p className={styles.title}>{title}</p>
                 <p className={styles.weight}>{weight}г</p>
-                <p className={styles.price}>{price}₽</p>
+                <p className={styles.price}>{receiveRubles(price)}</p>
             </div>
             <ChangeQuantity id={id} />
         </article>

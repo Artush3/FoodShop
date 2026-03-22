@@ -3,6 +3,7 @@ import CartItem from "@/entities/cart-item"
 import deliveryIcon from "@/shared/assets/icons/basket/delivery.svg"
 import PlaceOrder from "@/features/place-order"
 import { useBasket } from "@/app/store/useBasketStore"
+import receiveRubles from "@/shared/lib/receiveRubles"
 
 const Basket = () => {
     const basket = useBasket()
@@ -56,7 +57,7 @@ const Basket = () => {
             <div className={styles.footer}>
                 <div className={styles.block}>
                     <p className={styles.result}>Итог</p>
-                    <p className={styles.sum}>{sum}₽</p>
+                    <p className={styles.sum}>{receiveRubles(sum)}</p>
                 </div>
                 <PlaceOrder />
                 {sum > 599 && (

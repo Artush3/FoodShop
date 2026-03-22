@@ -1,7 +1,8 @@
 import AddToBasket from "@/features/add-to-basket"
 import styles from "./Product.module.scss"
 import { IItem } from "@/shared/types"
-import useProduct from "./model/useProduct"
+import receiveRubles from "@/shared/lib/receiveRubles"
+import useNavigateWithBackground from "@/shared/hooks/useNavigateWithBackground"
 
 const Product = (props: IItem) => {
     const {
@@ -12,13 +13,14 @@ const Product = (props: IItem) => {
         weight
     } = props
 
-    const openDetailsFunction = useProduct(id)
+    const openProduct = useNavigateWithBackground(`/food/${id}`)
 
     return (
         <article 
             className={styles.product}
             role="button"
-            onClick={openDetailsFunction}
+            onClick={openProduct}
+            tabIndex={0}
         >
             <img 
                 src={image} 
@@ -29,7 +31,7 @@ const Product = (props: IItem) => {
                 className={styles.image}
             />
             <div className={styles.description}>
-                <h3 className={styles.price}>{price}₽</h3>
+                <h3 className={styles.price}>{receiveRubles(price)}</h3>
                 <p className={styles.title}>{title}</p>
                 <p className={styles.weight}>{weight}г</p>
             </div>
