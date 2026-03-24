@@ -1,9 +1,9 @@
 import styles from "./Basket.module.scss"
 import CartItem from "@/entities/cart-item"
 import deliveryIcon from "@/shared/assets/icons/basket/delivery.svg"
-import PlaceOrder from "@/features/place-order"
 import { useBasket } from "@/app/store/useBasketStore"
 import receiveRubles from "@/shared/lib/receiveRubles"
+import Button from "@/shared/ui/button"
 
 const Basket = () => {
     const basket = useBasket()
@@ -59,7 +59,10 @@ const Basket = () => {
                     <p className={styles.result}>Итог</p>
                     <p className={styles.sum}>{receiveRubles(sum)}</p>
                 </div>
-                <PlaceOrder />
+                <Button  
+                    title="Оформить заказ" 
+                    isAccent
+                />
                 {sum > 599 && (
                     <div className={styles.delivery}>
                         <img src={deliveryIcon} alt="" width={24} height={24} className={styles.icon} loading="lazy" />

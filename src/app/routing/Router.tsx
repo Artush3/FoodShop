@@ -3,13 +3,11 @@ import { lazy, Suspense } from 'react'
 
 const Home = lazy(() => import('@/pages/home'))
 const Details = lazy(() => import('@/pages/details'))
-const Delivery = lazy(() => import('@/pages/delivery'))
 const NotFound = lazy(() => import('@/pages/not-found'))
 
 const ROUTES = {
     HOME: '/',
-    FOOD_DETAILS: 'food/:id',
-    DELIVERY: 'delivery',
+    FOOD_DETAILS: 'food/:id'
 } as const
 
 const AppRoutes = () => {
@@ -28,7 +26,6 @@ const AppRoutes = () => {
                 {background && (
                     <Routes>
                         <Route path={ROUTES.FOOD_DETAILS} element={<Details />} />
-                        <Route path={ROUTES.DELIVERY} element={<Delivery />} />
                     </Routes>
                 )}
             </Suspense>
